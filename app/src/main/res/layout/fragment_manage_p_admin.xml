@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragment.User.HistoryFragment"
+    android:id="@+id/historyfragment"
+    android:padding="7dp"
+    android:orientation="vertical">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Danh sách sản phẩm"
+        android:padding="10dp"
+        android:textSize="25sp"
+        android:textColor="#F44336"
+        android:textStyle="italic"
+        android:layout_marginBottom="15dp"
+        android:layout_gravity="center_horizontal">
+
+    </TextView>
+
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/searchViewF"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="150dp"
+        app:queryHint="Search Here"
+        android:layout_height="wrap_content">
+    </androidx.appcompat.widget.SearchView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:weightSum="6"
+            >
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="ID"
+                android:textStyle="bold"
+                android:textColor="#E91E63">
+
+            </TextView>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:text="Tên"
+
+                android:textStyle="bold"
+                android:textColor="#E91E63"
+                >
+
+            </TextView>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Category"
+
+                android:textStyle="bold"
+                android:textColor="#E91E63">
+
+            </TextView>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Giá"
+                android:textStyle="bold"
+                android:textColor="#E91E63">
+
+            </TextView>
+
+
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/listviewAMF"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </ListView>
+    </LinearLayout>
+
+
+
+</LinearLayout>

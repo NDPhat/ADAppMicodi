@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item android:id="@+id/homeA"
+            android:title="Trang chủ"
+            android:icon="@drawable/ic_home">
+
+        </item>
+        <item
+            android:title="Người dùng"
+            android:icon="@drawable/ic_person"
+           >
+            <menu>
+                <group  android:checkableBehavior="single">
+                    <item android:id="@+id/MuserA"
+                        android:title="Quản lí người dùng"
+                        android:icon="@drawable/ic_person">
+                    </item>
+                </group>
+
+            </menu>
+        </item>
+        <item
+            android:title="Sản phẩm"
+            android:icon="@drawable/ic_cart">
+            <menu>
+                <group  android:checkableBehavior="single">
+                    <item android:id="@+id/MproductA"
+                        android:title="Quản lí sản phẩm"
+                        android:icon="@drawable/ic_food_bank">
+
+                    </item>
+
+                    <item android:id="@+id/addproductA"
+                        android:title="Thêm sản phẩm"
+                        android:icon="@drawable/ic_addp">
+                    </item>
+                </group>
+            </menu>
+
+        </item>
+        <item
+
+            android:title="Others"
+            android:icon="@drawable/ic_other">
+            <menu>
+                <group  android:checkableBehavior="single">
+                    <item android:id="@+id/McategoryA"
+                        android:title="Quản lí category"
+                        android:icon="@drawable/ic_category">
+
+                    </item>
+
+                    <item android:id="@+id/MreviewA"
+                        android:title="Quản lí bình luận"
+                        android:icon="@drawable/ic_comment">
+                    </item>
+
+                    <item android:id="@+id/MorderA"
+                        android:title="Quản lí đơn hàng"
+                        android:icon="@drawable/ic_history">
+
+                    </item>
+                </group>
+            </menu>
+
+        </item>
+        <item
+            android:title="Logout"
+            android:icon="@drawable/ic_logout">
+            <menu>
+            <group  android:checkableBehavior="single">
+                <item android:id="@+id/logoutA"
+                android:title="Dang xuat"
+             android:icon="@drawable/ic_logout">
+                </item>
+            </group>
+            </menu>
+
+        </item>
+
+
+
+    </group>
+</menu>

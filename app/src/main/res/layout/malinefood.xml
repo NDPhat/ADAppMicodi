@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/itemhistory"
+    android:orientation="vertical">
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:orientation="vertical"
+        android:padding="7dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:weightSum="6"
+            android:orientation="horizontal"
+            >
+            <TextView
+                android:id="@+id/MAFidf"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="Mã"
+                android:textStyle="italic"
+                android:textColor="@color/teal_700"
+                android:textSize="18sp"
+                android:layout_weight="1"
+                >
+
+            </TextView>
+            <TextView
+                android:id="@+id/MAFtenf"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="Ngày"
+                android:textStyle="italic"
+                android:textColor="@color/teal_700"
+                android:textSize="18sp"
+                android:layout_weight="2"
+                >
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/MAFcatef"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="Tổng tiền"
+                android:textStyle="italic"
+                android:textColor="@color/teal_700"
+                android:textSize="18sp"
+                android:layout_weight="1"
+                >
+
+            </TextView>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:id="@+id/MAFgiaf"
+                android:text="Tình trạng"
+                android:textStyle="italic"
+                android:textColor="@color/teal_700"
+                android:textSize="18sp"
+                android:layout_weight="1"
+                >
+
+            </TextView>
+            <ImageButton
+                android:id="@+id/MAFdetail"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="Tổng tiền"
+                android:src="@drawable/ic_settings"
+                android:textStyle="italic"
+                android:textColor="@color/teal_700"
+                android:textSize="18sp"
+                android:layout_weight="1"
+                >
+
+            </ImageButton>
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

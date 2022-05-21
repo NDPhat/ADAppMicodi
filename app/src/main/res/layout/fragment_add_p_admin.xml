@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragment.User.UserFragment"
+
+    >
+
+    <ImageView
+        android:id="@+id/AAFava"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginLeft="145dp"
+        android:layout_marginTop="15dp"
+        tools:src="@drawable/ham" />
+
+    <Button
+        android:id="@+id/AAFbtnup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="148dp"
+        android:layout_marginTop="145dp"
+        android:text="Upload">
+
+    </Button>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="221dp"
+        android:text="Name"
+        android:textColor="#673AB7"
+        android:textSize="20sp">
+
+    </TextView>
+
+    <EditText
+        android:id="@+id/AAFtenf"
+        android:layout_width="232dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="220dp"
+        android:background="#FC66FFBD"
+        android:drawableStart="@drawable/ic_person"
+        android:drawablePadding="10dp"
+        android:ems="10"
+        android:textColor="#673AB7"
+        android:layout_marginLeft="150dp"
+        android:hint="hamberger"
+        android:textSize="20sp">
+
+    </EditText>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="281dp"
+        android:text="Category"
+        android:textColor="#673AB7"
+        android:textSize="20sp">
+
+    </TextView>
+
+    <Spinner
+        android:id="@+id/AAFspinnerCate"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:background="@android:drawable/btn_dropdown"
+        android:spinnerMode="dropdown"
+        android:layout_marginLeft="150dp"
+        android:layout_marginTop="281dp"
+        android:drawableStart="@drawable/ic_phone"
+        android:textColor="#673AB7"
+        android:textSize="20sp">
+    </Spinner>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="361dp"
+        android:text="Thông tin"
+        android:textColor="#673AB7"
+        android:textSize="20sp">
+
+    </TextView>
+
+    <Spinner
+        android:id="@+id/AAFspinnerInfo"
+        android:layout_marginLeft="150dp"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:background="@android:drawable/btn_dropdown"
+        android:layout_marginTop="361dp"
+        android:textColor="#673AB7"
+        android:textSize="20sp">
+
+    </Spinner>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="441dp"
+        android:text="Giá"
+        android:textColor="#673AB7"
+        android:textSize="20sp">
+
+    </TextView>
+
+    <EditText
+        android:id="@+id/AAFgiaf"
+        android:layout_width="232dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="150dp"
+        android:layout_marginTop="441dp"
+        android:background="#FC66FFBD"
+        android:drawableStart="@drawable/ic_money"
+        android:drawablePadding="10dp"
+        android:ems="10"
+        android:hint="1.000.xxx"
+        android:textColor="#673AB7"
+        android:textSize="20sp">
+
+    </EditText>
+
+
+
+    <Button
+        android:id="@+id/AAFbtnadd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="148dp"
+        android:layout_marginTop="511dp"
+        android:text="Submit">
+
+    </Button>
+
+
+</FrameLayout>

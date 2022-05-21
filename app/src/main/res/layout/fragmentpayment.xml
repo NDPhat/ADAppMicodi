@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="10"
+    android:orientation="vertical"
+    android:background="#058BC34A"
+    android:id="@+id/paymentfragment">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="6">
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ListView
+                android:id="@+id/listitempayment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            </ListView>
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="6"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="10"
+            android:background="#43009619"
+            android:layout_marginTop="5dp"
+            android:orientation="vertical">
+            <LinearLayout
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_weight="2"
+                android:layout_height="0dp"
+                android:background="#8BC34A"
+                android:orientation="horizontal"
+                android:layout_marginBottom="5dp"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="25sp"
+                    android:text="Thông tin hóa đơn"
+                    android:textStyle="bold"
+                    android:textColor="#F44336">
+                </TextView>
+            </LinearLayout>
+
+<!--            <LinearLayout-->
+<!--                android:gravity="center"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_weight="1"-->
+<!--                android:layout_height="0dp"-->
+<!--                android:orientation="horizontal"-->
+<!--                >-->
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:textSize="18sp"-->
+<!--                    android:text="Tên"-->
+<!--                    android:layout_weight="2"-->
+<!--                    android:layout_marginLeft="10dp"-->
+<!--                    android:textStyle="bold"-->
+<!--                    android:textColor="#2196F3">-->
+<!--                </TextView>-->
+
+<!--                <EditText-->
+<!--                    android:id="@+id/editTenKHTT"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:textSize="18sp"-->
+<!--                    android:layout_weight="4"-->
+<!--                    android:hint="Tên khách hàng"-->
+<!--                    android:gravity="center_horizontal"-->
+<!--                    android:textStyle="bold"-->
+<!--                    android:textColor="#F44336">-->
+<!--                </EditText>-->
+<!--            </LinearLayout>-->
+
+<!--            <LinearLayout-->
+<!--                android:gravity="center"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_weight="1"-->
+<!--                android:layout_height="0dp"-->
+<!--                android:orientation="horizontal"-->
+<!--                >-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginLeft="10dp"-->
+<!--                    android:layout_weight="2"-->
+<!--                    android:text="SDT"-->
+<!--                    android:textColor="#2196F3"-->
+<!--                    android:textSize="18sp"-->
+<!--                    android:textStyle="bold"></TextView>-->
+
+<!--                <EditText-->
+<!--                    android:id="@+id/editSDTKHTT"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:textSize="18sp"-->
+<!--                    android:layout_weight="4"-->
+<!--                    android:hint="SDT khách hàng"-->
+<!--                    android:gravity="center_horizontal"-->
+<!--                    android:textStyle="bold"-->
+<!--                    android:textColor="#F44336">-->
+<!--                </EditText>-->
+<!--            </LinearLayout>-->
+
+<!--            <LinearLayout-->
+<!--                android:gravity="center"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_weight="1"-->
+<!--                android:layout_height="0dp"-->
+<!--                android:orientation="horizontal"-->
+<!--                >-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="10dp"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:layout_marginLeft="10dp"-->
+<!--                    android:layout_weight="2"-->
+<!--                    android:text="Số nhà"-->
+<!--                    android:textColor="#2196F3"-->
+<!--                    android:textSize="18sp"-->
+<!--                    android:textStyle="bold">-->
+
+<!--                </TextView>-->
+
+<!--                <EditText-->
+<!--                    android:id="@+id/editSonhaKHTT"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:textSize="18sp"-->
+<!--                    android:layout_weight="4"-->
+<!--                    android:hint="Số nhà"-->
+<!--                    android:gravity="center_horizontal"-->
+<!--                    android:textStyle="bold"-->
+<!--                    android:textColor="#F44336">-->
+<!--                </EditText>-->
+<!--            </LinearLayout>-->
+
+<!--            <LinearLayout-->
+<!--                android:gravity="center"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_weight="1"-->
+<!--                android:layout_height="0dp"-->
+<!--                android:orientation="horizontal"-->
+<!--                >-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="4dp"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:layout_marginLeft="10dp"-->
+<!--                    android:layout_weight="2"-->
+<!--                    android:text="Đường"-->
+<!--                    android:textColor="#2196F3"-->
+<!--                    android:textSize="18sp"-->
+<!--                    android:textStyle="bold">-->
+
+<!--                </TextView>-->
+
+<!--                <EditText-->
+<!--                    android:id="@+id/editduongKHTT"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_weight="4"-->
+<!--                    android:gravity="center_horizontal"-->
+<!--                    android:hint="Đường"-->
+<!--                    android:textColor="#F44336"-->
+<!--                    android:textSize="18sp"-->
+<!--                    android:textStyle="bold"></EditText>-->
+<!--            </LinearLayout>-->
+
+<!--            <LinearLayout-->
+<!--                android:gravity="center"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_weight="1"-->
+<!--                android:layout_height="0dp"-->
+<!--                android:orientation="horizontal"-->
+<!--                >-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="10dp"-->
+<!--                    android:layout_height="43dp"-->
+<!--                    android:layout_marginLeft="10dp"-->
+<!--                    android:layout_weight="2"-->
+<!--                    android:text="Thành phố"-->
+<!--                    android:textColor="#2196F3"-->
+<!--                    android:textSize="18sp"-->
+<!--                    android:textStyle="bold">-->
+
+<!--                </TextView>-->
+
+<!--                <EditText-->
+<!--                    android:id="@+id/editTPKHTT"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_weight="4"-->
+<!--                    android:gravity="center_horizontal"-->
+<!--                    android:hint="Thành phố"-->
+<!--                    android:textColor="#F44336"-->
+<!--                    android:textSize="18sp"-->
+<!--                    android:textStyle="bold"></EditText>-->
+<!--            </LinearLayout>-->
+            <LinearLayout
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+
+                android:layout_height="0dp"
+                android:orientation="horizontal"
+                >
+
+                <TextView
+                    android:layout_width="34dp"
+                    android:layout_height="43dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:text="Mã HĐ"
+                    android:textColor="#2196F3"
+                    android:textSize="18sp"
+                    android:textStyle="bold">
+
+                </TextView>
+
+                <TextView
+                    android:id="@+id/editMaHDKHTT"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4"
+                    android:gravity="center_horizontal"
+                    android:hint="x"
+                    android:textColor="#F44336"
+                    android:textSize="18sp"
+                    android:textStyle="bold"></TextView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="0dp"
+                android:orientation="horizontal"
+                >
+
+                <TextView
+                    android:layout_width="34dp"
+                    android:layout_height="43dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:text="Số lượng"
+                    android:textColor="#2196F3"
+                    android:textSize="18sp"
+                    android:textStyle="bold">
+
+                </TextView>
+
+                <TextView
+                    android:id="@+id/editQTTKHTT"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4"
+                    android:gravity="center_horizontal"
+                    android:hint="x"
+                    android:textColor="#F44336"
+                    android:textSize="18sp"
+                    android:textStyle="bold"></TextView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="0dp"
+                android:orientation="horizontal"
+                >
+
+                <TextView
+                    android:layout_width="10dp"
+                    android:layout_height="43dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="2"
+                    android:text="Tổng tiền"
+                    android:textColor="#2196F3"
+                    android:textSize="18sp"
+                    android:textStyle="bold">
+
+                </TextView>
+
+                <TextView
+                    android:id="@+id/edittongtienKHTT"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4"
+                    android:gravity="center_horizontal"
+                    android:hint="1.000.000Đ"
+                    android:textColor="#F44336"
+                    android:textSize="18sp"
+                    android:textStyle="bold"></TextView>
+            </LinearLayout>
+            <LinearLayout
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_margin="5dp"
+                >
+                <Button
+                    android:id="@+id/btnchitietTT"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Chi tiết"
+                    android:layout_weight="1"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="5dp"
+                    android:textStyle="bold"
+                    android:textSize="22sp"
+                    >
+                </Button>
+
+                <Button
+                    android:id="@+id/btnthanhtoanTT"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Thanh Toán"
+                    android:textStyle="bold"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="1"
+                    android:textSize="22sp">
+
+                </Button>
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

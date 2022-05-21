@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragment.User.FoodDetailFragment"
+    android:id="@+id/fooddetail">
+
+    <ImageView
+        android:id="@+id/imageAvaFoodDetail"
+        android:layout_width="103dp"
+        android:layout_height="130dp"
+        android:src="@drawable/pizza"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/textTenDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="116dp"
+        android:layout_marginTop="28dp"
+        android:text="Ten"
+
+        android:textColor="#3F51B5"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textDesDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="116dp"
+        android:layout_marginTop="72dp"
+        android:inputType="number"
+        android:text="Description"
+        android:textColor="#4CAF50"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RatingBar
+        android:id="@+id/rating"
+        style="?android:attr/ratingBarStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="116dp"
+        android:layout_marginTop="100dp"
+        android:isIndicator="true"
+        android:numStars="5"
+        android:stepSize="0.1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/imageButtonAddDetail"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="264dp"
+        android:layout_marginTop="48dp"
+        android:src="@drawable/ic_add"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/textquantity"
+        android:layout_width="54dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="300dp"
+        android:layout_marginTop="28dp"
+        android:gravity="center"
+        android:text="1"
+        android:textColor="#E91E63"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/imageButtonMinus"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="368dp"
+        android:layout_marginTop="48dp"
+        android:paddingTop="26dp"
+        android:src="@drawable/ic_minuss"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/addgiohang"
+        android:layout_width="72dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="284dp"
+        android:layout_marginTop="84dp"
+        android:text="Add"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="120dp"
+        android:orientation="vertical"
+        >
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbarmota"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#03A9F4"
+           app:title="Thông tin sản phẩm">
+        </androidx.appcompat.widget.Toolbar>
+
+        <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="120dp"
+               android:orientation="vertical"
+               android:weightSum="2">
+               <TextView
+                   android:layout_width="match_parent"
+                   android:layout_height="0dp"
+                   android:layout_weight="1"
+                   android:text="Dia chi"
+                   android:textColor="#E91E63"
+                   android:textStyle="bold"
+                   android:textSize="22sp"
+                   android:gravity="center"
+                   android:id="@+id/diachiquan">
+
+               </TextView>
+
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="0dp"
+                   android:layout_weight="1"
+                   android:orientation="horizontal"
+                    >
+                   <LinearLayout
+                       android:layout_width="0dp"
+                       android:layout_height="match_parent"
+                       android:layout_weight="1"
+                       android:orientation="horizontal">
+
+                       <TextView
+                           android:layout_width="0dp"
+                           android:layout_height="match_parent"
+                           android:layout_weight="3"
+                           android:text="So sao"
+                           android:paddingLeft="40dp"
+                           android:textSize="14sp"
+                           android:textStyle="bold"
+                           android:textColor="@color/teal_700"
+                           android:id="@+id/sosao"
+                           android:gravity="center">
+
+
+                       </TextView>
+                       <ImageView
+                           android:id="@+id/starR"
+                           android:layout_width="0dp"
+                           android:layout_height="match_parent"
+                           android:layout_weight="2"
+                           android:src="@drawable/ic_star"
+                           android:scaleType="center">
+
+                       </ImageView>
+                   </LinearLayout>
+
+                   <LinearLayout
+                       android:layout_width="0dp"
+                       android:layout_height="match_parent"
+                       android:layout_weight="1"
+                       android:orientation="horizontal">
+
+                   <TextView
+                       android:layout_width="0dp"
+                       android:layout_height="match_parent"
+
+                       android:text="So Km"
+                       android:id="@+id/sokm"
+                       android:layout_weight="3"
+                       android:paddingLeft="40dp"
+                       android:textColor="@color/teal_700"
+                       android:textSize="14sp"
+                       android:textStyle="bold"
+                       android:gravity="center">
+
+
+
+                   </TextView>
+
+                   <ImageView
+                       android:layout_width="0dp"
+                       android:layout_height="match_parent"
+                       android:layout_weight="2"
+                       android:src="@drawable/ic_car"
+                       android:scaleType="center">
+                   </ImageView>
+
+                   </LinearLayout>
+
+                   <LinearLayout
+                       android:layout_width="0dp"
+                       android:layout_height="match_parent"
+                       android:layout_weight="1"
+                       android:orientation="horizontal">
+                   <TextView
+                       android:layout_width="0dp"
+                       android:layout_height="match_parent"
+                       android:layout_weight="3"
+                       android:paddingLeft="40dp"
+                       android:text="Thoi gian"
+                       android:textColor="@color/teal_700"
+                       android:textSize="14sp"
+                       android:textStyle="bold"
+                       android:id="@+id/thoigian"
+                       android:gravity="center">
+
+                   </TextView>
+
+                   <ImageView
+                       android:layout_width="0dp"
+                       android:layout_height="match_parent"
+                       android:layout_weight="2"
+                       android:src="@drawable/ic_time"
+                       android:scaleType="center">
+                   </ImageView>
+                   </LinearLayout>
+
+
+               </LinearLayout>
+               
+
+              
+        </LinearLayout>
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="50dp"
+          android:orientation="horizontal"
+          android:weightSum="4">
+          <LinearLayout
+              android:layout_width="0dp"
+              android:layout_height="match_parent"
+              android:layout_weight="3"
+              android:orientation="vertical">
+              <TextView
+                  android:layout_width="match_parent"
+                  android:layout_height="0dp"
+                  android:layout_weight="1"
+                  android:text="Đánh giá sản phẩm"
+                  android:textStyle="bold"
+                  android:textColor="#F44336"
+                  android:textSize="20sp"
+                  android:gravity="center">
+
+              </TextView>
+
+              <TextView
+                  android:id="@+id/tongRV"
+                  android:layout_width="match_parent"
+                  android:layout_height="0dp"
+                  android:layout_weight="1"
+                  android:text="(1 đánh giá)"
+                  android:textStyle="italic"
+                  android:gravity="center"
+                  android:textColor="#3A5DB7"
+                  android:textSize="16sp">
+
+              </TextView>
+
+          </LinearLayout>
+
+          <LinearLayout
+              android:layout_width="0dp"
+              android:layout_height="match_parent"
+              android:layout_weight="1">
+              <TextView
+                  android:id="@+id/xemRV"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="Xem tất cả"
+                  android:textSize="16sp"
+                  android:textStyle="italic"
+                  android:textColor="#F44336"
+                  android:layout_gravity="center"
+                  android:paddingLeft="10dp">
+
+              </TextView>
+
+          </LinearLayout>
+
+      </LinearLayout>
+      <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:weightSum="5"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+                <EditText
+                    android:layout_width="0dp"
+                    android:id="@+id/emailRV"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:hint="Email">
+
+                </EditText>
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:id="@+id/saoRV"
+                    android:inputType="number"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:hint="Số sao">
+
+                </EditText>
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="4"
+                android:orientation="vertical">
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="3"
+                    android:id="@+id/cmtRV">
+
+                </EditText>
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:visibility="invisible"
+                        >
+                    </Button>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+                        <Button
+                            android:id="@+id/btnguiRV"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="Gửi"
+                            android:layout_marginRight="2dp">
+                        </Button>
+                        <Button
+                            android:id="@+id/btnhuyRV"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="Hủy"
+                            android:layout_marginLeft="2dp">
+                        </Button>
+                    </LinearLayout>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </LinearLayout>
+
+
+      </LinearLayout>
+      <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/detailrecycle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </androidx.recyclerview.widget.RecyclerView>
+     </LinearLayout>
+
+
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "585788815670",
+    "firebase_url": "https://otpfinal-de678-default-rtdb.firebaseio.com",
+    "project_id": "otpfinal-de678",
+    "storage_bucket": "otpfinal-de678.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:585788815670:android:aa540645601acf00f0db97",
+        "android_client_info": {
+          "package_name": "com.example.appcomidi"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "585788815670-ek9eqmstj20mgqtq26fg9b5aiaf0f2e1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.appcomidi",
+            "certificate_hash": "490afb57b5260de578c5def217539e70676e8409"
+          }
+        },
+        {
+          "client_id": "585788815670-35t54u3hd4mk4cabvpjah0r9mkh2d83s.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDmzNIEfR-lSlAn_vF930JWzAuU_X_Cgmw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "585788815670-35t54u3hd4mk4cabvpjah0r9mkh2d83s.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

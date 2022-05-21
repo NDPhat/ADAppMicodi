@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_margin="10dp"
+    android:weightSum="12"
+   >
+    <TextView
+        android:layout_marginTop="40dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Thông tin cá nhân"
+        android:layout_weight="1"
+        android:background="#00BCD4"
+        android:textSize="22sp"
+        android:textColor="@color/teal_700"
+        android:textStyle="bold"
+        android:textAlignment="center">
+    </TextView>
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_weight="2"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="2dp"
+        android:weightSum="2"
+        tools:ignore="MissingConstraints">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/usernameHORSP"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+
+                android:layout_weight="1"
+                android:layout_marginRight="4dp"
+                android:background="#FC66FFBD"
+                android:drawableStart="@drawable/ic_person"
+                android:drawablePadding="10dp"
+                android:ems="10"
+                android:hint="phatxxx"
+                android:textColor="#673AB7"
+                android:textSize="20sp">
+            </TextView>
+
+            <TextView
+                android:id="@+id/userphoneHORSP"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+
+                android:layout_weight="1"
+                android:layout_marginLeft="4dp"
+                android:background="#FC66FFBD"
+                android:drawableStart="@drawable/ic_phone"
+                android:drawablePadding="10dp"
+                android:ems="10"
+                android:hint="012xxxxxxx"
+                android:textColor="#673AB7"
+                android:textSize="18sp">
+            </TextView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginTop="2dp"
+            android:weightSum="2"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/sonhaHORSP"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+
+                android:background="#FC66FFBD"
+                android:layout_marginRight="4dp"
+                android:drawableStart="@drawable/ic_home"
+                android:drawablePadding="10dp"
+                android:ems="10"
+                android:hint="12/2 xxx"
+                android:textColor="#673AB7"
+                android:textSize="20sp">
+
+            </TextView>
+
+
+            <TextView
+                android:id="@+id/duongHORSP"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#FC66FFBD"
+                android:drawableStart="@drawable/ic_distric"
+                android:drawablePadding="10dp"
+                android:ems="10"
+                android:layout_marginLeft="4dp"
+                android:hint="Phan Huy XXX"
+                android:textColor="#673AB7"
+                android:textSize="20sp">
+
+            </TextView>
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="2dp"
+        android:layout_margin="4dp"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:weightSum="2"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/mahoadonHORSP"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="#FC66FFBD"
+                android:layout_marginRight="4dp"
+                android:drawableStart="@drawable/ic_order"
+                android:drawablePadding="10dp"
+                android:ems="10"
+                android:layout_weight="1"
+                android:hint="Mã hóa đơn"
+                android:textColor="#673AB7"
+                android:textSize="20sp"
+                >
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/tongtienHORSP"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="#FC66FFBD"
+                android:drawableStart="@drawable/ic_payment"
+                android:drawablePadding="10dp"
+                android:ems="10"
+                android:layout_weight="1"
+                android:hint="1.000.000x"
+                android:layout_marginLeft="4dp"
+                android:textColor="#673AB7"
+                android:textSize="20sp">
+
+            </TextView>
+
+        </LinearLayout>
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Thông tin đơn hàng"
+        android:layout_weight="1"
+        android:background="#00BCD4"
+        android:textSize="22sp"
+        android:textColor="@color/teal_700"
+        android:textStyle="bold"
+        android:textAlignment="center">
+    </TextView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:layout_margin="4dp">
+
+        <ListView
+            android:id="@+id/listviewHORSP"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </ListView>
+    </LinearLayout>
+
+
+
+</LinearLayout>

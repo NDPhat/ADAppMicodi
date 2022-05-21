@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item android:id="@+id/ordershipper"
+            android:title="Đơn hàng"
+            android:icon="@drawable/ic_delivery">
+
+        </item>
+        <item android:id="@+id/historyshipper"
+            android:title="Lịch sử"
+            android:icon="@drawable/ic_history">
+
+        </item>
+
+
+        <item android:id="@+id/shipperlogout"
+            android:title="Đăng xuất"
+            android:icon="@drawable/ic_logout">
+        </item>
+    </group>
+
+</menu>

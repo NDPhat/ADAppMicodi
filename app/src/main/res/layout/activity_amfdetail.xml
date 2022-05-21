@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <ImageView
+        android:id="@+id/AMFDimageViewAva"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginLeft="145dp"
+        android:layout_marginTop="15dp"
+        tools:src="@tools:sample/avatars" />
+
+    <Button
+        android:id="@+id/AMFDbtnupload"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="148dp"
+        android:layout_marginTop="145dp"
+        android:text="Upload">
+
+    </Button>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="221dp"
+        android:text="Name"
+        android:textColor="#673AB7"
+        android:textSize="20sp">
+
+    </TextView>
+
+    <EditText
+        android:id="@+id/AMFDname"
+        android:layout_width="232dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="220dp"
+        android:background="#FC66FFBD"
+        android:drawableStart="@drawable/ic_person"
+        android:drawablePadding="10dp"
+        android:ems="10"
+        android:textColor="#673AB7"
+        android:layout_marginLeft="150dp"
+        android:hint="phatxxx"
+        android:textSize="20sp">
+
+    </EditText>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="281dp"
+        android:text="Category"
+        android:textColor="#673AB7"
+        android:textSize="20sp">
+
+    </TextView>
+    <Spinner
+        android:id="@+id/AMFDspinnerCate"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:background="@android:drawable/btn_dropdown"
+        android:spinnerMode="dropdown"
+        android:layout_marginLeft="150dp"
+        android:layout_marginTop="281dp"
+        android:drawableStart="@drawable/ic_phone"
+        android:textColor="#673AB7"
+        android:textSize="20sp">
+    </Spinner>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="351dp"
+        android:text="Price"
+        android:textColor="#673AB7"
+        android:textSize="20sp">
+
+    </TextView>
+
+    <EditText
+        android:id="@+id/AMFDPrice"
+        android:layout_width="232dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="150dp"
+        android:background="#FC66FFBD"
+        android:drawableStart="@drawable/ic_home"
+        android:drawablePadding="10dp"
+        android:ems="10"
+        android:hint="12/2 xxx"
+        android:layout_marginTop="361dp"
+        android:textColor="#673AB7"
+        android:textSize="20sp">
+
+    </EditText>
+
+    <Button
+        android:id="@+id/AMFDbtnsubmit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="148dp"
+        android:layout_marginTop="441dp"
+        android:text="Submit">
+
+    </Button>
+
+
+</FrameLayout>

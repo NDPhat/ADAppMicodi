@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragment.User.UserFragment"
+
+    >
+
+    <ImageView
+        android:id="@+id/imageViewAva"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginLeft="145dp"
+        android:layout_marginTop="15dp"
+        tools:src="@tools:sample/avatars" />
+
+    <Button
+        android:id="@+id/btnupload"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="148dp"
+        android:layout_marginTop="145dp"
+        android:text="Upload">
+
+    </Button>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="221dp"
+        android:text="Name"
+        android:textColor="#673AB7"
+        android:textSize="20sp">
+
+    </TextView>
+
+    <EditText
+        android:id="@+id/usernameUS"
+        android:layout_width="232dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="220dp"
+        android:background="#FC66FFBD"
+        android:drawableStart="@drawable/ic_person"
+        android:drawablePadding="10dp"
+        android:ems="10"
+        android:textColor="#673AB7"
+        android:layout_marginLeft="150dp"
+        android:hint="phatxxx"
+        android:textSize="20sp">
+
+    </EditText>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="281dp"
+        android:text="Phone"
+        android:textColor="#673AB7"
+        android:textSize="20sp">
+
+    </TextView>
+    <EditText
+        android:id="@+id/userphoneUS"
+        android:layout_width="232dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="150dp"
+        android:background="#FC66FFBD"
+        android:drawableStart="@drawable/ic_phone"
+        android:drawablePadding="10dp"
+        android:ems="10"
+        android:hint="012xxxxxxx"
+        android:layout_marginTop="281dp"
+        android:textColor="#673AB7"
+        android:textSize="20sp">
+
+    </EditText>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="341dp"
+        android:text="Số nhà"
+        android:textColor="#673AB7"
+        android:textSize="20sp">
+
+    </TextView>
+
+    <EditText
+        android:id="@+id/sonhaUS"
+        android:layout_width="232dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="150dp"
+        android:background="#FC66FFBD"
+        android:drawableStart="@drawable/ic_home"
+        android:drawablePadding="10dp"
+        android:ems="10"
+        android:hint="12/2 xxx"
+        android:layout_marginTop="341dp"
+        android:textColor="#673AB7"
+        android:textSize="20sp">
+
+    </EditText>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="401dp"
+        android:text="Đường"
+        android:textColor="#673AB7"
+        android:textSize="20sp">
+
+    </TextView>
+    <EditText
+        android:id="@+id/duongUS"
+        android:layout_width="232dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="150dp"
+        android:background="#FC66FFBD"
+        android:drawableStart="@drawable/ic_distric"
+        android:drawablePadding="10dp"
+        android:ems="10"
+        android:hint="Phan Huy XXX"
+        android:layout_marginTop="401dp"
+        android:textColor="#673AB7"
+        android:textSize="20sp">
+
+    </EditText>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="461dp"
+        android:text="Thành phố"
+        android:textColor="#673AB7"
+        android:textSize="20sp">
+
+    </TextView>
+    <EditText
+        android:id="@+id/thanhphoUS"
+        android:layout_width="232dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="150dp"
+        android:background="#FC66FFBD"
+        android:drawableStart="@drawable/ic_city"
+        android:drawablePadding="10dp"
+        android:ems="10"
+        android:hint="Bảo XXX"
+        android:layout_marginTop="461dp"
+        android:textColor="#673AB7"
+        android:textSize="20sp">
+
+    </EditText>
+
+    <Button
+        android:id="@+id/btnsubmit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="148dp"
+        android:layout_marginTop="541dp"
+        android:text="Submit">
+
+    </Button>
+
+
+</FrameLayout>

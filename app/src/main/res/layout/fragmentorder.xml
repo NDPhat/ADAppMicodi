@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:id="@+id/orderfragment">
+        <RelativeLayout
+
+            android:layout_width="wrap_content"
+            android:layout_height="70dp">
+                <com.google.android.material.bottomnavigation.BottomNavigationView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/navigationviewtopcate"
+                    android:fitsSystemWindows="true"
+                    android:layout_marginTop="0dp"
+                    android:layout_alignParentBottom="true"
+                    app:menu="@menu/menutopcategory"
+                    android:background="#fff"
+                    app:itemTextColor="@color/topcateclick"
+                    app:itemIconTint="@color/topcateclick"
+                    >
+
+                </com.google.android.material.bottomnavigation.BottomNavigationView>
+        </RelativeLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/recycleviewfood">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+
+
+</LinearLayout>

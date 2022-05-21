@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/btmordershipper"
+        android:title="Đơn hàng"
+        android:icon="@drawable/ic_delivery">
+
+    </item>
+    <item android:id="@+id/btmhistoryshipper"
+        android:title="Lịch sử"
+        android:icon="@drawable/ic_history">
+
+    </item>
+</menu>

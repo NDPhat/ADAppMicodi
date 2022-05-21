@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item android:title="All"
+            android:icon="@drawable/ic_food_bank"
+            android:id="@+id/all"
+            >
+        </item>
+
+        <item android:title="Drinks"
+            android:icon="@drawable/ic_drinks"
+            android:id="@+id/drinks"
+            >
+        </item>
+
+        <item android:title="FastFood"
+            android:icon="@drawable/ic_astfood"
+            android:id="@+id/fastfood"
+            >
+        </item>
+
+        <item android:title="Cream"
+            android:icon="@drawable/ic_icecream"
+            android:id="@+id/cream"
+            >
+        </item>
+        <item android:title="VnFood"
+            android:icon="@drawable/ic_vnfood"
+            android:id="@+id/vnfood"
+            >
+        </item>
+
+    </group>
+
+
+
+</menu>
