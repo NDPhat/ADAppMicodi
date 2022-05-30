@@ -1,6 +1,7 @@
 package com.example.appcomidi.Adapter.Admin;
 
 import android.content.Context;
+import android.content.DialogInterface;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.view.LayoutInflater;
@@ -13,9 +14,15 @@ import android.widget.Filterable;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import androidx.appcompat.app.AlertDialog;
 
 import com.example.appcomidi.Model.Users;
 import com.example.appcomidi.R;
+import com.example.appcomidi.ViewModel.AccountViewModel;
+import com.example.appcomidi.ViewModel.CartViewModel;
+import com.example.appcomidi.ViewModel.UserViewModel;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -80,7 +87,7 @@ public class LineUserAdapter extends BaseAdapter implements Filterable {
     public class ViewHolder
     {
         TextView ten,id;
-        ImageButton btnchitiet;
+        ImageButton btnchitiet,btndelete;
         ImageView ava;
     }
     @Override
@@ -115,13 +122,24 @@ public class LineUserAdapter extends BaseAdapter implements Filterable {
             viewHolder.id=view.findViewById(R.id.AIdUS);
             viewHolder.ava=view.findViewById(R.id.AphotoUS);
             viewHolder.btnchitiet=view.findViewById(R.id.AbtnChitiet);
+            viewHolder.btndelete=view.findViewById(R.id.AbtnDelete);
             view.setTag(viewHolder);
         }
         else {
             viewHolder= (ViewHolder) view.getTag();
         }
         final  Users users= (Users) getItem(position);
-        viewHolder.ten.setText(users.getName());
+        if (AccountViewModel.getDataAccountbyAccid(users.getAccid()).getActive().equals("Banned"))
+        {
+            viewHolder.ten.setText("Banned");
+            viewHolder.btndelete.setEnabled(false);
+            viewHolder.btnchitiet.setEnabled(false);
+
+
+        }
+        else {
+            viewHolder.ten.setText(users.getName());
+        }
         viewHolder.id.setText(""+(position+1));
 
         if (users.getImage()==null)
@@ -136,6 +154,33 @@ public class LineUserAdapter extends BaseAdapter implements Filterable {
             @Override
             public void onClick(View view) {
                 ifChitietClick.IFButtonChitietClick(users.getId());
+            }
+        });
+        ViewHolder finalViewHolder = viewHolder;
+        viewHolder.btndelete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                AlertDialog.Builder builder=new AlertDialog.Builder(context);
+                builder.setTitle("Xác nhận khóa tài khoản này!!");
+                builder.setMessage("Bạn có chắc muốn khóa tài khoản này?");
+                builder.setPositiveButton("Có", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        UserViewModel.updateStatusUserById(users.getAccid());
+                        finalViewHolder.ten.setText("Banned");
+                        notifyDataSetChanged();
+                        Toast.makeText(context,"Khóa tài khoản thành công !!",Toast.LENGTH_SHORT).show();
+
+                    }
+                });
+                builder.setNegativeButton("Không", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        notifyDataSetChanged();
+                    }
+                });
+                builder.show();
+
             }
         });
 

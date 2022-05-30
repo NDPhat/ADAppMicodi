@@ -7,137 +7,136 @@
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            tools:layout_editor_absoluteX="16dp"
-            tools:layout_editor_absoluteY="99dp">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="55dp"
+        tools:layout_editor_absoluteY="-50dp">
 
-            <TextView
-                android:id="@+id/textView9"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="48dp"
-                android:layout_marginTop="444dp"
-                android:text="Confirm Password"
-                android:textColor="#FFFFFF"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="48dp"
+            android:layout_marginTop="444dp"
+            android:text="Confirm Password"
+            android:textColor="#FFFFFF"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-            <EditText
-                android:id="@+id/repassRegister"
-                android:layout_width="331dp"
-                android:layout_height="44dp"
-                android:layout_marginStart="48dp"
-                android:layout_marginTop="480dp"
-                android:background="#FC66FFBD"
-                android:drawableStart="@drawable/ic_24"
-                android:drawableRight="@drawable/ic_showhint"
-                android:drawablePadding="10dp"
-                android:ems="10"
-                android:hint="Re-Password"
-                android:inputType="textPersonName"
-                android:textColor="#FF227A"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <ImageView
-                android:id="@+id/imageView"
-                android:layout_width="400dp"
-                android:layout_height="50dp"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="60dp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/imageviewlogin" />
-
-
-            <TextView
-                android:id="@+id/textView2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="48dp"
-                android:layout_marginTop="224dp"
-                android:text="Email"
-                android:textColor="#FFFFFF"
-                android:textSize="16sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:id="@+id/textView3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="48dp"
-                android:layout_marginTop="340dp"
-                android:text="Password"
-                android:textColor="#FFFFFF"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:id="@+id/txtLoginBack"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="128dp"
-                android:layout_marginTop="620dp"
-                android:text="Already have a account?"
-                android:textAlignment="center"
-                android:textAllCaps="false"
-                android:textColor="#03A9F4"
-                android:textStyle="bold"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-
-
-            <EditText
-                android:id="@+id/passRegister"
-                android:layout_width="331dp"
-                android:layout_height="44dp"
-                android:layout_marginStart="48dp"
-                android:layout_marginTop="376dp"
-                android:background="#FC66FFBD"
-                android:drawableStart="@drawable/ic_24"
-                android:drawableRight="@drawable/ic_showhint"
-                android:drawablePadding="10dp"
-                android:ems="10"
-                android:hint="Password"
-                android:inputType="textPersonName"
-                android:textColor="#FF227A"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <EditText
-                android:id="@+id/emailRegister"
-                android:layout_width="331dp"
-                android:layout_height="44dp"
-                android:layout_marginStart="48dp"
-                android:layout_marginTop="276dp"
-                android:background="#FC66FFBD"
-                android:drawableStart="@drawable/ic_email"
-                android:drawablePadding="10dp"
-                android:ems="10"
-                android:hint="abc@gmail.com"
-                android:inputType="textPersonName"
-                android:textColor="#FF227A"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <Button
-                android:id="@+id/btnRegister"
-                android:layout_width="123dp"
-                android:layout_height="38dp"
-                android:layout_marginStart="144dp"
-                android:layout_marginTop="564dp"
-                android:text="Register"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
+        <EditText
+            android:id="@+id/repassRegister"
+            android:layout_width="331dp"
+            android:layout_height="44dp"
+            android:layout_marginStart="48dp"
+            android:layout_marginTop="480dp"
+            android:background="#FC66FFBD"
+            android:drawableStart="@drawable/ic_24"
+            android:drawableRight="@drawable/ic_showhint"
+            android:drawablePadding="10dp"
+            android:ems="10"
+            android:hint="Re-Password"
+            android:inputType="textPersonName"
+            android:textColor="#FF227A"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="400dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="60dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/imageviewlogin" />
+
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="48dp"
+            android:layout_marginTop="224dp"
+            android:text="Email"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="48dp"
+            android:layout_marginTop="340dp"
+            android:text="Password"
+            android:textColor="#FFFFFF"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txtLoginBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="128dp"
+            android:layout_marginTop="620dp"
+            android:text="Already have a account?"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="#03A9F4"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <EditText
+            android:id="@+id/passRegister"
+            android:layout_width="331dp"
+            android:layout_height="44dp"
+            android:layout_marginStart="48dp"
+            android:layout_marginTop="376dp"
+            android:background="#FC66FFBD"
+            android:drawableStart="@drawable/ic_24"
+            android:drawableRight="@drawable/ic_showhint"
+            android:drawablePadding="10dp"
+            android:ems="10"
+            android:hint="Password"
+            android:inputType="textPersonName"
+            android:textColor="#FF227A"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/emailRegister"
+            android:layout_width="331dp"
+            android:layout_height="44dp"
+            android:layout_marginStart="48dp"
+            android:layout_marginTop="276dp"
+            android:background="#FC66FFBD"
+            android:drawableStart="@drawable/ic_email"
+            android:drawablePadding="10dp"
+            android:ems="10"
+            android:hint="abc@gmail.com"
+            android:inputType="textPersonName"
+            android:textColor="#FF227A"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btnRegister"
+            android:layout_width="123dp"
+            android:layout_height="38dp"
+            android:layout_marginStart="144dp"
+            android:layout_marginTop="564dp"
+            android:text="Register"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
             android:id="@+id/imageView3"
             android:layout_width="400dp"
             android:layout_height="50dp"

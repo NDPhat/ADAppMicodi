@@ -20,6 +20,9 @@ import com.example.appcomidi.ViewModel.DBViewModel;
 import com.example.appcomidi.ViewModel.UserViewModel;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.firestore.FirebaseFirestore;
+
+import java.util.HashMap;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -46,6 +49,7 @@ public class MainActivity extends AppCompatActivity {
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                addDatatoFireStore();
                 int accid= AccountViewModel.CheckUserandPassword(email.getText().toString(),pass.getText().toString());
                 if (accid!=0 )
                 {
@@ -92,6 +96,19 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-
+    public void addDatatoFireStore() {
+        FirebaseFirestore firebaseFirestore = FirebaseFirestore.getInstance();
+        HashMap<String, Object> data = new HashMap<>();
+        data.put("Name", "Chiras");
+        firebaseFirestore.collection("users")
+                .add(data)
+                .addOnSuccessListener(documentReference -> {
+                    Toast.makeText(getApplication(), "Data added", Toast.LENGTH_SHORT).show();
+                })
+                .addOnFailureListener(exception ->
+                {
+                    Toast.makeText(getApplication(), exception.getMessage(), Toast.LENGTH_SHORT).show();
+                });
+    }
 
 }

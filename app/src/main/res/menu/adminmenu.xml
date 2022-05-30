@@ -16,6 +16,11 @@
                         android:title="Quản lí người dùng"
                         android:icon="@drawable/ic_person">
                     </item>
+
+                    <item android:id="@+id/AuserA"
+                        android:title="Thêm người dùng"
+                        android:icon="@drawable/ic_person">
+                    </item>
                 </group>
 
             </menu>

@@ -3,14 +3,20 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/K2N3/Mobile/PJ/IUMVVM/app/src/main/res/drawable-v24/background_chat_input.xml" value="0.1435" />
+        <entry key="..\:/K2N3/Mobile/PJ/IUMVVM/app/src/main/res/drawable-v24/background_content_top.xml" value="0.1435" />
+        <entry key="..\:/K2N3/Mobile/PJ/IUMVVM/app/src/main/res/drawable-v24/background_sent_message.xml" value="0.1435" />
         <entry key="..\:/K2N3/Mobile/PJ/IUMVVM/app/src/main/res/drawable-v24/ic_24.xml" value="0.2265" />
+        <entry key="..\:/K2N3/Mobile/PJ/IUMVVM/app/src/main/res/drawable-v24/ic_back.xml" value="0.1435" />
         <entry key="..\:/K2N3/Mobile/PJ/IUMVVM/app/src/main/res/drawable-v24/ic_person.xml" value="0.1435" />
+        <entry key="..\:/K2N3/Mobile/PJ/IUMVVM/app/src/main/res/drawable-v24/ic_send.xml" value="0.1435" />
         <entry key="..\:/K2N3/Mobile/PJ/IUMVVM/app/src/main/res/drawable/ic_minus.xml" value="0.2265" />
         <entry key="..\:/K2N3/Mobile/PJ/IUMVVM/app/src/main/res/drawable/ic_minuss.xml" value="0.2265" />
         <entry key="..\:/K2N3/Mobile/PJ/IUMVVM/app/src/main/res/drawable/ic_vnfood.xml" value="0.1435" />
         <entry key="..\:/K2N3/Mobile/PJ/IUMVVM/app/src/main/res/layout/activity_admin.xml" value="0.23333333333333334" />
         <entry key="..\:/K2N3/Mobile/PJ/IUMVVM/app/src/main/res/layout/activity_amfdetail.xml" value="0.25" />
         <entry key="..\:/K2N3/Mobile/PJ/IUMVVM/app/src/main/res/layout/activity_change_pass.xml" value="0.25" />
+        <entry key="..\:/K2N3/Mobile/PJ/IUMVVM/app/src/main/res/layout/activity_chat.xml" value="0.176" />
         <entry key="..\:/K2N3/Mobile/PJ/IUMVVM/app/src/main/res/layout/activity_chi_tiet_mua.xml" value="0.25" />
         <entry key="..\:/K2N3/Mobile/PJ/IUMVVM/app/src/main/res/layout/activity_chitiet.xml" value="0.25" />
         <entry key="..\:/K2N3/Mobile/PJ/IUMVVM/app/src/main/res/layout/activity_chitiet_hractivity.xml" value="0.25" />
@@ -40,7 +46,9 @@
         <entry key="..\:/K2N3/Mobile/PJ/IUMVVM/app/src/main/res/layout/foodcate.xml" value="0.2324074074074074" />
         <entry key="..\:/K2N3/Mobile/PJ/IUMVVM/app/src/main/res/layout/fooddetail.xml" value="0.25" />
         <entry key="..\:/K2N3/Mobile/PJ/IUMVVM/app/src/main/res/layout/fooditem.xml" value="0.25" />
+        <entry key="..\:/K2N3/Mobile/PJ/IUMVVM/app/src/main/res/layout/fragment_add_cate_admin.xml" value="0.25" />
         <entry key="..\:/K2N3/Mobile/PJ/IUMVVM/app/src/main/res/layout/fragment_add_p_admin.xml" value="0.25" />
+        <entry key="..\:/K2N3/Mobile/PJ/IUMVVM/app/src/main/res/layout/fragment_add_user.xml" value="0.25" />
         <entry key="..\:/K2N3/Mobile/PJ/IUMVVM/app/src/main/res/layout/fragment_cart.xml" value="0.264" />
         <entry key="..\:/K2N3/Mobile/PJ/IUMVVM/app/src/main/res/layout/fragment_contact.xml" value="0.25" />
         <entry key="..\:/K2N3/Mobile/PJ/IUMVVM/app/src/main/res/layout/fragment_food_detail.xml" value="0.264" />
@@ -65,6 +73,7 @@
         <entry key="..\:/K2N3/Mobile/PJ/IUMVVM/app/src/main/res/layout/header.xml" value="0.1" />
         <entry key="..\:/K2N3/Mobile/PJ/IUMVVM/app/src/main/res/layout/itemcart.xml" value="0.25" />
         <entry key="..\:/K2N3/Mobile/PJ/IUMVVM/app/src/main/res/layout/linecate.xml" value="0.264" />
+        <entry key="..\:/K2N3/Mobile/PJ/IUMVVM/app/src/main/res/layout/lineitemchatmess.xml" value="0.25" />
         <entry key="..\:/K2N3/Mobile/PJ/IUMVVM/app/src/main/res/layout/lineitemhistory.xml" value="0.16" />
         <entry key="..\:/K2N3/Mobile/PJ/IUMVVM/app/src/main/res/layout/lineitemhome.xml" value="0.25" />
         <entry key="..\:/K2N3/Mobile/PJ/IUMVVM/app/src/main/res/layout/lineitemorderdetailshipper.xml" value="0.25" />
@@ -76,7 +85,7 @@
         <entry key="..\:/K2N3/Mobile/PJ/IUMVVM/app/src/main/res/layout/malinefood.xml" value="0.25" />
         <entry key="..\:/K2N3/Mobile/PJ/IUMVVM/app/src/main/res/layout/paymentitem.xml" value="0.264" />
         <entry key="..\:/K2N3/Mobile/PJ/IUMVVM/app/src/main/res/menu/adminmenu.xml" value="0.25" />
-        <entry key="..\:/K2N3/Mobile/PJ/IUMVVM/app/src/main/res/menu/menu.xml" value="0.16" />
+        <entry key="..\:/K2N3/Mobile/PJ/IUMVVM/app/src/main/res/menu/menu.xml" value="0.2" />
         <entry key="..\:/K2N3/Mobile/PJ/IUMVVM/app/src/main/res/menu/menubottom.xml" value="0.25" />
         <entry key="..\:/K2N3/Mobile/PJ/IUMVVM/app/src/main/res/menu/menubottomshipper.xml" value="0.25" />
         <entry key="..\:/K2N3/Mobile/PJ/IUMVVM/app/src/main/res/menu/menutopcategory.xml" value="0.25" />

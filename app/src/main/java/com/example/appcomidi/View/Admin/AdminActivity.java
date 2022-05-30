@@ -14,6 +14,7 @@ import android.view.MenuItem;
 import android.view.View;
 
 import com.example.appcomidi.Fragment.Admin.AddPAdminFragment;
+import com.example.appcomidi.Fragment.Admin.FragmentAddUser;
 import com.example.appcomidi.Fragment.Admin.HomeAdminFragment;
 import com.example.appcomidi.Fragment.Admin.ManageCateAdminFragment;
 import com.example.appcomidi.Fragment.Admin.ManageOrdersAdminFragment;
@@ -38,7 +39,10 @@ public class AdminActivity extends AppCompatActivity implements NavigationView.O
     public static final int FMC= 4;
     public static final int FMR= 5;
     public static final int FMO = 6;
+
+
     public static final int Flogout=7;
+    public static final int FAU = 8;
     public static int FCurrent = Fhome;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -91,6 +95,13 @@ public class AdminActivity extends AppCompatActivity implements NavigationView.O
             ReplaceFragment(new ManagePAdminFragment());
 
             FCurrent = FMP;
+        }
+    }
+    private void openAUFragment() {
+        if (FCurrent != FAU) {
+            ReplaceFragment(new FragmentAddUser());
+
+            FCurrent = FAU;
         }
     }
     private void openAPFragment() {
@@ -154,8 +165,12 @@ public class AdminActivity extends AppCompatActivity implements NavigationView.O
 
         } else if (id == R.id.MorderA) {
             openMOFragment();
-
-        } else if (id == R.id.logoutA) {
+        }
+        else if (id==R.id.AuserA)
+        {
+            openAUFragment();
+        }
+        else if (id == R.id.logoutA) {
             Intent intent = new Intent(AdminActivity.this, MainActivity.class);
             startActivity(intent);
         }

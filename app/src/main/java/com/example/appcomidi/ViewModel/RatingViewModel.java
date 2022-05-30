@@ -26,6 +26,11 @@ public class RatingViewModel {
         DBViewModel.sqLiteDatabase.insert("Rating","userid,Email,fid,binhluan,sosao",contentValues);
 
     }
+    public static void DeleteReView( int id)
+    {
+        DBViewModel.sqLiteDatabase.delete("Rating","Id=?",new String[]{""+id});
+
+    }
     public static List<Rating> getAllReviewbyFid(int foodid)
     {
         List<Rating> ratingList=new ArrayList<>();

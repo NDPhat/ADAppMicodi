@@ -52,7 +52,6 @@ public class LineItemCateAdapter extends RecyclerView.Adapter<LineItemCateAdapte
         {
             return;
         }
-
         holder.catename.setText(category.getName());
         LinearLayoutManager linearLayoutManager=new LinearLayoutManager(context,RecyclerView.HORIZONTAL,false);
         RecyclerView.ItemDecoration itemDecoration=new DividerItemDecoration(context,DividerItemDecoration.HORIZONTAL);

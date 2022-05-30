@@ -115,12 +115,8 @@ public class PaymentmethodAcitivity extends AppCompatActivity {
             if (resultCode == RESULT_OK) {
                 PaymentConfirmation confirmation = data.getParcelableExtra(PaymentActivity.EXTRA_RESULT_CONFIRMATION);
                 if (confirmation != null) {
-//
-
-
                             Intent intent=new Intent(PaymentmethodAcitivity.this,PaymentDetail.class);
                             startActivity(intent);
-
                 }
 
             } else if (resultCode == Activity.RESULT_CANCELED) {

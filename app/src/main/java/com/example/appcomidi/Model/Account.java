@@ -8,6 +8,7 @@ public class Account {
     private String email;
     private String pass;
     private String repass;
+    private String Active;
 
 
     public int getId() {
@@ -59,6 +60,22 @@ public class Account {
         this.pass = pass;
 
     }
+    public Account(String email, String pass,String active,String no) {
+        this.email = email;
+        this.pass = pass;
+        this.Active=active;
+
+
+    }
+
+    public String getActive() {
+        return Active;
+    }
+
+    public void setActive(String active) {
+        Active = active;
+    }
+
     public boolean isValidEmail()
     {
         return  !TextUtils.isEmpty(email) && Patterns.EMAIL_ADDRESS.matcher(email).matches();

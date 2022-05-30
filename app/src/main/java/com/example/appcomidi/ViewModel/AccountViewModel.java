@@ -63,7 +63,8 @@ public class AccountViewModel {
             cursor.moveToFirst();
             String email=cursor.getString(1);
             String pass=cursor.getString(2);
-            Account account=new Account(email,pass);
+            String active=cursor.getString(3);
+            Account account=new Account(email,pass,active,"null");
             return account;
         }
 
@@ -97,9 +98,23 @@ public class AccountViewModel {
             contentValues.put("Active","Active");
             DBViewModel.sqLiteDatabase.insert("Account","Email,Password,Active",contentValues);
             int id=CheckUserandPassword(acc.getEmail(),acc.getPass());
-            System.out.println(""+id);
             acc.setId(id);
             UserViewModel.insertUser(CheckUserandPassword(acc.getEmail(),acc.getPass()));
 
     }
+    public static void CreateAccount( Account acc,int rid)
+    {
+        //DBViewModel.sqLiteDatabase= DB.initDatabase(activity,DBViewModel.DBName);
+        ContentValues contentValues=new ContentValues();
+        contentValues.put("Email",acc.getEmail());
+        contentValues.put("Password",acc.getPass());
+        contentValues.put("Active","Active");
+        DBViewModel.sqLiteDatabase.insert("Account","Email,Password,Active",contentValues);
+        int id=CheckUserandPassword(acc.getEmail(),acc.getPass());
+        acc.setId(id);
+        UserViewModel.createUser(CheckUserandPassword(acc.getEmail(),acc.getPass()),rid);
+
+    }
+
+
 }

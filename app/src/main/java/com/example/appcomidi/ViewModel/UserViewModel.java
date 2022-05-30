@@ -96,7 +96,22 @@ public class UserViewModel {
         DBViewModel.sqLiteDatabase.insert("User","RoleID,Aid",contentValues);
 
     }
+    public static void createUser(int acid,int roleID)
+    {
+        //DBViewModel.sqLiteDatabase= DB.initDatabase(activity,DBViewModel.DBName);
+        ContentValues contentValues=new ContentValues();
+        contentValues.put("RoleID",roleID);
+        contentValues.put("Aid",acid);
+        DBViewModel.sqLiteDatabase.insert("User","RoleID,Aid",contentValues);
 
+    }
+    public static void updateStatusUserById( int aid)
+    {
+        ContentValues contentValues=new ContentValues();
+        contentValues.put("Active","Banned");
+        DBViewModel.sqLiteDatabase.update("Account",contentValues,"Id =?",new String[]{""+aid});
+
+    }
 
 
 

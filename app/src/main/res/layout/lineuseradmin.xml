@@ -38,13 +38,25 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+
     <ImageButton
         android:id="@+id/AbtnChitiet"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="312dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginStart="296dp"
+        android:layout_marginTop="40dp"
         android:src="@drawable/ic_eye"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/AbtnDelete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="356dp"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/ic_delete"
         android:textSize="12sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

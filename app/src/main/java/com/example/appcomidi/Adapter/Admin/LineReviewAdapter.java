@@ -1,20 +1,27 @@
 package com.example.appcomidi.Adapter.Admin;
 
 import android.content.Context;
+import android.content.DialogInterface;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.Button;
 import android.widget.Filter;
 import android.widget.Filterable;
 import android.widget.ImageView;
 import android.widget.RatingBar;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import androidx.appcompat.app.AlertDialog;
 
 import com.example.appcomidi.Model.Rating;
 import com.example.appcomidi.R;
+import com.example.appcomidi.ViewModel.RatingViewModel;
+import com.example.appcomidi.ViewModel.UserViewModel;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -70,6 +77,7 @@ public class LineReviewAdapter extends BaseAdapter implements Filterable {
         TextView email,cmt;
         RatingBar ratingBar;
         ImageView ava;
+        Button btndelete;
     }
     @Override
     public int getCount() {
@@ -91,7 +99,7 @@ public class LineReviewAdapter extends BaseAdapter implements Filterable {
     }
 
     @Override
-    public View getView(int i, View view, ViewGroup viewGroup) {
+    public View getView(int position, View view, ViewGroup viewGroup) {
         ViewHolder viewHolder=null;
         if (view==null)
         {
@@ -102,13 +110,14 @@ public class LineReviewAdapter extends BaseAdapter implements Filterable {
             viewHolder.ratingBar=view.findViewById(R.id.AMRrating);
             viewHolder.cmt=view.findViewById(R.id.AMRtextRV);
             viewHolder.ava=view.findViewById(R.id.AMRimageAva);
+            viewHolder.btndelete=view.findViewById(R.id.ARbuttonDelete);
             view.setTag(viewHolder);
         }
         else
         {
             viewHolder= (ViewHolder) view.getTag();
         }
-        final Rating rating= (Rating) getItem(i);
+        final Rating rating= (Rating) getItem(position);
         if (rating.getPhoto()==null)
         {
             viewHolder.ava.setImageResource(R.drawable.avamacdinh);
@@ -121,6 +130,31 @@ public class LineReviewAdapter extends BaseAdapter implements Filterable {
         viewHolder.email.setText(rating.getEmail());
         viewHolder.ratingBar.setRating(rating.getSosao());
         viewHolder.cmt.setText(rating.getCmt());
+        viewHolder.btndelete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                AlertDialog.Builder builder=new AlertDialog.Builder(context);
+                builder.setTitle("Xác nhận xóa bình luận này!!");
+                builder.setMessage("Bạn có chắc muốn xóa bình luận này?");
+                builder.setPositiveButton("Có", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        ratingList.remove(position);
+                        RatingViewModel.DeleteReView(rating.getId());
+                        notifyDataSetChanged();
+                        Toast.makeText(context,"Xóa bình luận thành công !!",Toast.LENGTH_SHORT).show();
+                    }
+                });
+                builder.setNegativeButton("Không", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        notifyDataSetChanged();
+                    }
+                });
+                builder.show();
+
+            }
+        });
         return view;
     }
 }
