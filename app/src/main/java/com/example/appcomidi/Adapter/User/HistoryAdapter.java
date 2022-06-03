@@ -116,6 +116,7 @@ public class HistoryAdapter extends BaseAdapter {
 
             }
         });
+
         viewHolder.butonchitiet.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

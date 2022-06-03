@@ -2,8 +2,11 @@ package com.example.appcomidi.View;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
+import android.widget.ImageButton;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -34,8 +37,8 @@ public class HomePageActivity extends AppCompatActivity implements NavigationVie
 
     private Toolbar toolbar;
     private DrawerLayout drawerLayout;
-    private NavigationView navigationView;
-    private  BottomNavigationView bottomNavigationView;
+    public static NavigationView navigationView;
+    public static   BottomNavigationView bottomNavigationView;
 
     public static ArrayList<Giohang> giohangArrayList;
     public static final int Fhome = 0;
@@ -77,13 +80,31 @@ public class HomePageActivity extends AppCompatActivity implements NavigationVie
         });
 
     }
-
+    //cmt backpress
+//    @Override
+//    public boolean onOptionsItemSelected(MenuItem item) {
+//        switch (item.getItemId())
+//        {
+//            case R.id.backpress:
+//                finish();
+//                return true;
+//            default:break;
+//        }
+//
+//        return super.onOptionsItemSelected(item);
+//    }
+//    @Override
+//    public boolean onCreateOptionsMenu(Menu menu) {
+//        getMenuInflater().inflate(R.menu.menutoolbar, menu);
+//        return true;
+//    }
     private void anhxa() {
 
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         navigationView = (NavigationView) findViewById(R.id.navigation);
         drawerLayout = (DrawerLayout) findViewById(R.id.drawerlayout);
         bottomNavigationView = findViewById(R.id.bottomnavi);
+
         //khia bang gio hang
         if (giohangArrayList!=null)
         {
@@ -173,15 +194,20 @@ public class HomePageActivity extends AppCompatActivity implements NavigationVie
 
 
         } else if (id==R.id.payment) {
+
             openpayFragment();
+            bottomNavigationView.getMenu().findItem(R.id.btmcart).setChecked(true);
+
 
         }
         else if (id == R.id.profile) {
             openAccFragment();
+            bottomNavigationView.getMenu().findItem(R.id.btmhistory).setChecked(true);
+
 
         } else if (id == R.id.changepass) {
             openChangePassFragment();
-            bottomNavigationView.getMenu().findItem(R.id.btmhome).setChecked(true);
+            bottomNavigationView.getMenu().findItem(R.id.btmhistory).setChecked(true);
 
         } else if (id == R.id.logout) {
             Intent intent = new Intent(HomePageActivity.this, MainActivity.class);

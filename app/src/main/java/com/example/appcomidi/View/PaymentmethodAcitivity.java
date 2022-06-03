@@ -101,6 +101,7 @@ public class PaymentmethodAcitivity extends AppCompatActivity {
                     HomePageActivity.giohangArrayList.get(i).setCartid(orderid);
                     OrderViewModel.insertOrderDetail(HomePageActivity.giohangArrayList.get(i));
                 }
+                //showNotification(0);
                 HomePageActivity.giohangArrayList.clear();
                 CartFragment.Sumprice();
                 processPayment();

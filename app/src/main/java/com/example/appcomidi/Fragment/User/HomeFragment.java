@@ -47,8 +47,6 @@ public class HomeFragment extends Fragment {
         homerecycleview=view.findViewById(R.id.homerecycle);
         homePageActivity=(HomePageActivity) getActivity();
         ActionViewFlipper();
-
-
         lineItemCateAdapter=new LineItemCateAdapter(homePageActivity, new LineItemCateAdapter.IFClickLineFoodItemCate() {
             @Override
             public void OnClickItemFood(Food food) {

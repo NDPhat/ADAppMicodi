@@ -46,4 +46,19 @@ public class AddressViewModel {
         DBViewModel.sqLiteDatabase.insert("Address","sonha,duong,thanhpho,userid",contentValues);
 
     }
+    public static int FindNextId()
+    {
+        Cursor cursor=DBViewModel.sqLiteDatabase.rawQuery("select * from Address ",null);
+        cursor.moveToLast();
+        return (cursor.getInt(0)+1);
+    }
+
+    public static void addnewAddbyId(int addid,int usid)
+    {
+        ContentValues contentValues=new ContentValues();
+        contentValues.put("Id",addid);
+        contentValues.put("userid",usid);
+        DBViewModel.sqLiteDatabase.insert("Address","Id,userid",contentValues);
+
+    }
 }

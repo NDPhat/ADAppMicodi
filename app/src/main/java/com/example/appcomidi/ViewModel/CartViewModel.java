@@ -29,6 +29,7 @@ public class CartViewModel {
                 for (int i = 0; i < HomePageActivity.giohangArrayList.size(); i++) {
                     if (HomePageActivity.giohangArrayList.get(i).getIdsp() == food.getId()) {
                         HomePageActivity.giohangArrayList.get(i).setSoluongsp(HomePageActivity.giohangArrayList.get(i).getSoluongsp() + quantity);
+                        HomePageActivity.giohangArrayList.get(i).setGiasp(HomePageActivity.giohangArrayList.get(i).getGiasp()*HomePageActivity.giohangArrayList.get(i).getSoluongsp());
                         exit = true;
                     }
                 }

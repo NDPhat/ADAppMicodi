@@ -100,11 +100,11 @@ public class AccountViewModel {
             int id=CheckUserandPassword(acc.getEmail(),acc.getPass());
             acc.setId(id);
             UserViewModel.insertUser(CheckUserandPassword(acc.getEmail(),acc.getPass()));
+            AddressViewModel.addnewAddbyId(AddressViewModel.FindNextId(),UserViewModel.getUserIdByAccId(id));
 
     }
     public static void CreateAccount( Account acc,int rid)
     {
-        //DBViewModel.sqLiteDatabase= DB.initDatabase(activity,DBViewModel.DBName);
         ContentValues contentValues=new ContentValues();
         contentValues.put("Email",acc.getEmail());
         contentValues.put("Password",acc.getPass());
@@ -113,7 +113,7 @@ public class AccountViewModel {
         int id=CheckUserandPassword(acc.getEmail(),acc.getPass());
         acc.setId(id);
         UserViewModel.createUser(CheckUserandPassword(acc.getEmail(),acc.getPass()),rid);
-
+        AddressViewModel.addnewAddbyId(AddressViewModel.FindNextId(),UserViewModel.getUserIdByAccId(id));
     }
 
 

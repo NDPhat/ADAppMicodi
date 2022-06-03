@@ -29,7 +29,7 @@ public class PaymentDetail extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_payment_detail);
 
-
+        showNotification(0);
         btnhome=findViewById(R.id.buttonHomeDone);
         btnhome.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -38,6 +38,21 @@ public class PaymentDetail extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+    }
+    @RequiresApi(api = Build.VERSION_CODES.O)
+    private void showNotification(Integer id) {
+
+        NotificationManager nm = (NotificationManager) getSystemService(NotificationManager.class);
+        NotificationChannel channel = new NotificationChannel("1", "Your Order!!", NotificationManager.IMPORTANCE_DEFAULT);
+        nm.createNotificationChannel(channel);
+        NotificationCompat.Builder mBuilder = new NotificationCompat.Builder(this, "1")
+                .setSmallIcon(R.drawable.ic_notifications)
+                .setContentTitle("Your Order!!")
+                .setContentText("Cảm ơn bạn đã đặt hàng thành công!!")
+                .setPriority(NotificationCompat.PRIORITY_DEFAULT);
+        NotificationManagerCompat managerCompat = NotificationManagerCompat.from(this);
+        android.app.Notification notification = mBuilder.build();
+        nm.notify(id, notification);
     }
 
 

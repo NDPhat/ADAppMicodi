@@ -17,20 +17,30 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
 
-            <androidx.appcompat.widget.Toolbar
-                android:id="@+id/toolbar"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
-                android:background="#03A9F4"
-                app:navigationIcon="@drawable/ic_menu"
-                app:title="Comida"></androidx.appcompat.widget.Toolbar>
+                android:weightSum="8"
+                android:id="@+id/linear">
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="0dp"
+                    android:layout_height="?attr/actionBarSize"
+                    android:background="#03A9F4"
+                    android:layout_weight="8"
+                    app:navigationIcon="@drawable/ic_menu"
+                    app:title="Comida"></androidx.appcompat.widget.Toolbar>
+
+
+            </LinearLayout>
+
 
             <FrameLayout
                 android:id="@+id/content"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_above="@id/bottomnavi"
-                android:layout_below="@id/toolbar">
+                android:layout_below="@id/linear">
 
             </FrameLayout>
 

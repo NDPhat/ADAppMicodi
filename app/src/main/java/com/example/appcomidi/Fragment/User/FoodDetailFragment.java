@@ -5,6 +5,8 @@ import android.graphics.BitmapFactory;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.widget.Toolbar;
+import androidx.core.view.GravityCompat;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.DividerItemDecoration;
@@ -12,6 +14,8 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
@@ -47,6 +51,7 @@ import java.util.List;
 
 public class FoodDetailFragment extends Fragment {
     private TextView txtTen;
+
     private TextView price,diachiquan,saotongRV,thoigian,sokm,tongrv,xemrv;
     private EditText quantity,email,saoURV,cmt;
     private ImageButton btnplus,btnminus;
@@ -71,6 +76,9 @@ public class FoodDetailFragment extends Fragment {
         // Inflate the layout for this fragment
 
         view =inflater.inflate(R.layout.fragment_food_detail, container, false);
+        HomePageActivity.bottomNavigationView.getMenu().findItem(R.id.btmorder).setChecked(true);
+        HomePageActivity.navigationView.getMenu().findItem(R.id.order).setChecked(true);
+        HomePageActivity.FCurrent=HomePageActivity.Forder;
         Anhxa();
 
         setData();
@@ -102,6 +110,7 @@ public class FoodDetailFragment extends Fragment {
         return  view;
 
     }
+
     public void setData()
     {
 
@@ -157,6 +166,7 @@ public class FoodDetailFragment extends Fragment {
         xemrv=view.findViewById(R.id.xemRV);
         guirv=view.findViewById(R.id.btnguiRV);
         huyrv=view.findViewById(R.id.btnhuyRV);
+
         users= UserViewModel.getUserIdById(MainActivity.user.getId());
         account=AccountViewModel.getDataAccountbyAccid(MainActivity.user.getAccid());
         viewRV=view.findViewById(R.id.reviewactivity);

@@ -106,10 +106,21 @@ public class UserFragment extends Fragment {
     public void setData()
     {
         homePageActivity= (HomePageActivity) getActivity();
+        users=UserViewModel.getUserIdById(MainActivity.user.getId());
+        if (users.getImage()==null)
+        {
+            avatar.setImageResource(R.drawable.avamacdinh);
+
+        }
+        else {
+            Bitmap bitmap= BitmapFactory.decodeByteArray(users.getImage(),0,users.getImage().length);
+            avatar.setImageBitmap(bitmap);
+        }
         if (UserViewModel.getUserIdById(MainActivity.user.getId())!=null && AddressViewModel.getAddressbyuid(MainActivity.user.getId())!=null)
         {
             users=UserViewModel.getUserIdById(MainActivity.user.getId());
             address= AddressViewModel.getAddressbyuid(MainActivity.user.getId());
+            System.out.println( "Address la "+address.getId());
             name.setText(users.getName());
             phone.setText(users.getPhone());
             if (users.getImage()==null)
@@ -189,8 +200,9 @@ public class UserFragment extends Fragment {
                 String d=duong.getText().toString();
                 String tp=thanhpho.getText().toString();
 
+
                 if (USname.equals("") || USphone.equals("")
-                    || sn.equals("") || d.equals("") || tp.equals("") ||avatar.getDrawable().equals(""))
+                    || sn.equals("") || d.equals("") || tp.equals(""))
                 {
                     Toast.makeText(homePageActivity,"Vui lòng điền đủ thông tin!!",Toast.LENGTH_LONG).show();
                 }
@@ -199,6 +211,7 @@ public class UserFragment extends Fragment {
                     byte[] USimg=imageViewtoByte(avatar);
                     Users users=new Users(MainActivity.user.getId(),USname,USphone,USimg,MainActivity.user.getIdrole());
                     address=AddressViewModel.getAddressbyuid(MainActivity.user.getId());
+
                     address.setCity(tp);
                     address.setStreet(d);
                     address.setHomenumber(sn);

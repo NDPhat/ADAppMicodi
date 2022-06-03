@@ -120,6 +120,9 @@ public class CartFragment extends Fragment {
         buttontieptuc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                HomePageActivity.bottomNavigationView.getMenu().findItem(R.id.btmorder).setChecked(true);
+                HomePageActivity.navigationView.getMenu().findItem(R.id.order).setChecked(true);
+                HomePageActivity.FCurrent=HomePageActivity.Forder;
                 FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
                 OrderFragment orderFragment = new OrderFragment();
                 fragmentTransaction.replace(R.id.cartfragment, orderFragment);
