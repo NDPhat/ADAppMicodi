@@ -60,7 +60,7 @@
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:orientation="horizontal"
-            android:weightSum="2"
+            android:weightSum="3"
             >
             <Button
                 android:id="@+id/btnchitietdonORSP"
@@ -71,6 +71,8 @@
                 android:layout_margin="5dp">
 
             </Button>
+
+
             <Button
                 android:id="@+id/btnnhandonORSP"
                 android:layout_width="wrap_content"
@@ -80,6 +82,15 @@
                 android:layout_weight="1">
 
             </Button>
+            <ImageButton
+                android:id="@+id/btncallORSP"
+                android:src="@drawable/ic_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_margin="5dp">
+
+            </ImageButton>
         </LinearLayout>
 
 

@@ -1,8 +1,14 @@
 package com.example.appcomidi.Fragment.Shipper;
 
+import android.Manifest;
+import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AlertDialog;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
@@ -24,11 +30,13 @@ import com.example.appcomidi.ViewModel.AddressViewModel;
 import com.example.appcomidi.ViewModel.CartViewModel;
 import com.example.appcomidi.ViewModel.OrderViewModel;
 import com.example.appcomidi.ViewModel.UserViewModel;
+import com.google.firebase.firestore.auth.User;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class ShipperOrderFragment extends Fragment {
+    private static final int REQUEST_PHONE_CALL =100 ;
     private View view,viewShipperODCT;
     ListView listViewORSP,listViewShipperODCT;
     private ShipperActivity shipperActivity;
@@ -58,21 +66,33 @@ public class ShipperOrderFragment extends Fragment {
             orderShipperAdapter=new OrderShipperAdapter(shipperActivity, listAllorder, new OrderShipperAdapter.IFChitietLClick() {
                 @Override
                 public void IFBtnChitietClick(int orderid) {
-                    giohangArrayList= OrderViewModel.getALlOrderDetailbyOrderId(orderid);
-                    order=CartViewModel.getCartbyId(orderid);
-                    users=UserViewModel.getUserIdById(order.getUserid());
-                    address= AddressViewModel.getAddressbyuid(order.getUserid());
+                    giohangArrayList = OrderViewModel.getALlOrderDetailbyOrderId(orderid);
+                    order = CartViewModel.getCartbyId(orderid);
+                    users = UserViewModel.getUserIdById(order.getUserid());
+                    address = AddressViewModel.getAddressbyuid(order.getUserid());
                     AlertDialog.Builder alertDialog = new AlertDialog.Builder(shipperActivity);
                     viewShipperODCT = getLayoutInflater().inflate(R.layout.activity_shipper_order_detail, null);
                     AnhxaCTORHS();
                     setDataCTORHS();
-                    shipperDetailFoodAdapter=new ShipperDetailFoodAdapter(giohangArrayList,shipperActivity);
+                    shipperDetailFoodAdapter = new ShipperDetailFoodAdapter(giohangArrayList, shipperActivity);
                     listViewShipperODCT.setAdapter(shipperDetailFoodAdapter);
                     alertDialog.setView(viewShipperODCT);
                     AlertDialog dialog = alertDialog.create();
                     dialog.show();
                 }
-            });
+            },
+                    new OrderShipperAdapter.IFClickPhoneCall() {
+                        @Override
+                        public void ClickPhoenCall(Order order) {
+                            if (ContextCompat.checkSelfPermission(shipperActivity, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
+                                ActivityCompat.requestPermissions(shipperActivity, new String[]{Manifest.permission.CALL_PHONE},REQUEST_PHONE_CALL);
+                            }
+                            Users user=UserViewModel.getUserIdById(order.getUserid());
+                            String telephone = user.getPhone().toString();
+                            Intent intent = new Intent(Intent.ACTION_CALL, Uri.fromParts("tel", telephone, null));
+                            startActivity(intent);
+                        }
+        });
             listViewORSP.setAdapter(orderShipperAdapter);
         }
         else {

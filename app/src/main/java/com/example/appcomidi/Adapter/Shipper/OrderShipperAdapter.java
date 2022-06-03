@@ -3,11 +3,14 @@ package com.example.appcomidi.Adapter.Shipper;
 import android.app.Activity;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
+import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -30,21 +33,28 @@ public class OrderShipperAdapter extends BaseAdapter {
     private Context context;
     List<Order> orderList;
     private IFChitietLClick ifChitietLClick;
+    private IFClickPhoneCall ifClickPhoneCall;
     public interface IFChitietLClick
     {
         void IFBtnChitietClick(int position);
     }
+    public interface IFClickPhoneCall
+    {
+        void ClickPhoenCall(Order order);
+    }
 
-    public OrderShipperAdapter(Context context, List<Order> orderList,IFChitietLClick ifChitietLClick) {
+    public OrderShipperAdapter(Context context, List<Order> orderList,IFChitietLClick ifChitietLClick,IFClickPhoneCall ifClickPhoneCall1) {
         this.context = context;
         this.orderList = orderList;
         this.ifChitietLClick=ifChitietLClick;
+        this.ifClickPhoneCall=ifClickPhoneCall1;
     }
 
     public class  ViewHolder
     {
         TextView txtma,txtGiatien,txtnguoinhan;
         Button buttonnhandon,buttonchitiet;
+        ImageButton btncall;
     }
     @Override
     public int getCount() {
@@ -78,6 +88,7 @@ public class OrderShipperAdapter extends BaseAdapter {
             viewHolder.txtnguoinhan=view.findViewById(R.id.nguoinhanORSP);
             viewHolder.buttonnhandon=view.findViewById(R.id.btnnhandonORSP);
             viewHolder.buttonchitiet=view.findViewById(R.id.btnchitietdonORSP);
+            viewHolder.btncall=view.findViewById(R.id.btncallORSP);
             view.setTag(viewHolder);
         }
         else
@@ -129,6 +140,13 @@ public class OrderShipperAdapter extends BaseAdapter {
             public void onClick(View view) {
 
                 ifChitietLClick.IFBtnChitietClick(order.getId());
+            }
+        });
+        viewHolder.btncall.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                ifClickPhoneCall.ClickPhoenCall(order);
             }
         });
         return view;
